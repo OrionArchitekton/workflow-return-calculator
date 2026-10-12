@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Automation ROI Calculator | Workflow Return</title>
+<meta name="description" content="Estimate the capacity value and break-even point of an AI workflow. Include human review, exceptions, setup, and running costs.">
+<link rel="canonical" href="https://workflow-return.orionapex.chatgpt.site/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%2310212b'/%3E%3Cpath d='M12 43h14l9-22 8 22h9' fill='none' stroke='%23a9edc2' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#e9f4ed;background:#0b171c;font-size:16px}*{box-sizing:border-box}body{margin:0}a{color:#a9edc2}button,input{font:inherit}button{cursor:pointer}header{border-bottom:1px solid #294047;background:#102128}nav{max-width:1160px;margin:auto;padding:19px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:-.035em;font-size:1.25rem;color:#f2faf4;text-decoration:none}.brand i{font-style:normal;color:#a9edc2}.navlink{font-size:.9rem;color:#c8dad1;text-decoration:none}main{max-width:1160px;margin:auto;padding:54px 24px 80px}.eyebrow{color:#a9edc2;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.77rem}h1{font-size:clamp(2.4rem,5.7vw,4.75rem);max-width:850px;line-height:1.06;letter-spacing:-.065em;margin:15px 0 18px}h1 em{color:#a9edc2;font-style:normal}.intro{color:#b9cbc3;font-size:1.12rem;line-height:1.6;max-width:680px;margin:0 0 42px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}.panel{border:1px solid #315058;background:#13272e;border-radius:18px;padding:29px}.result{background:#d7f4df;color:#10242a;border-color:#d7f4df;position:sticky;top:20px}h2{font-size:1.4rem;letter-spacing:-.035em;margin:0 0 8px}.sub{color:#a9bdb5;line-height:1.5;margin:0 0 24px}.result .sub{color:#456156}.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:block}.field span{display:block;font-size:.88rem;font-weight:650;margin-bottom:8px;color:#d4e6dc}.field small{display:block;color:#9db6ac;font-size:.78rem;margin-top:6px;line-height:1.35}.field input{width:100%;background:#0c1b21;color:#f4fff8;border:1px solid #436069;border-radius:9px;padding:13px 14px;outline:none}.field input:focus{border-color:#a9edc2;box-shadow:0 0 0 3px #a9edc233}.divider{height:1px;background:#35505a;margin:25px 0}.metric-label{font-weight:700;color:#36574a;font-size:.88rem}.big{font-size:clamp(2.75rem,6vw,5rem);font-weight:800;letter-spacing:-.07em;line-height:1;margin:11px 0 4px}.big-note{margin:0 0 25px;color:#456156}.stats{display:grid;grid-template-columns:1fr 1fr;gap:13px}.stat{border-top:1px solid #a6cbb1;padding-top:14px}.stat strong{font-size:1.45rem;letter-spacing:-.04em;display:block}.stat span{font-size:.82rem;color:#426154}.risk{color:#426154;font-size:.82rem;line-height:1.45;margin:0 0 18px}.verdict{margin:23px 0 18px;border-radius:10px;background:#bce7c8;padding:15px;line-height:1.45}.actions{display:flex;gap:10px;flex-wrap:wrap}.action{background:#10272b;color:#effff3;border:0;border-radius:9px;padding:12px 16px;font-weight:700}.action.secondary{background:transparent;color:#193d34;border:1px solid #82ad91}.next-step{margin-top:22px;padding:18px;border:1px solid #90b69c;border-radius:12px;background:#effaf0}.next-step strong{display:block;font-size:1.02rem}.next-step p{color:#426154;font-size:.9rem;line-height:1.5;margin:7px 0 14px}.next-step a{display:inline-block;background:#10272b;color:#effff3;text-decoration:none;font-weight:750;padding:11px 15px;border-radius:9px}.next-step small{display:block;color:#567264;font-size:.78rem;line-height:1.45;margin-top:10px}.error{color:#842820;font-weight:700;min-height:1.4em;margin:12px 0 0}.below{margin-top:76px;display:grid;grid-template-columns:1fr 1fr;gap:50px;color:#b8ccc2;line-height:1.65}.below h2{color:#f4faf5}.below p{margin:10px 0 18px}.below ul{padding-left:20px}.below li{margin-bottom:8px}footer{border-top:1px solid #294047;padding:24px;color:#93ada1;font-size:.82rem;text-align:center}@media(max-width:800px){main{padding-top:35px}.grid,.below{grid-template-columns:1fr}.result{position:static}.below{gap:12px;margin-top:55px}}@media(max-width:510px){.fields,.stats{grid-template-columns:1fr 1fr;gap:13px}.panel{padding:21px}.field input{padding:11px}.field span{min-height:2.5em}.navlink{display:none}}
+</style>
+
+</head>
+<body>
+<header>
+<nav>
+<a class="brand" href="https://workflow-return.orionapex.chatgpt.site/">workflow<i>return</i>
+</a>
+<div style="display:flex;gap:18px">
+<a class="navlink" href="https://workflow-return.orionapex.chatgpt.site/checklist/">Readiness check</a>
+<a class="navlink" href="https://workflow-return.orionapex.chatgpt.site/guide/">Pilot guide</a>
+<a class="navlink" href="https://workflow-return.orionapex.chatgpt.site/workbook/">Pilot workbook</a>
+</div>
+</nav>
+</header>
+<main>
+<div class="eyebrow">Free planning tool · No signup</div>
+<h1>Will this AI workflow <em>actually pay off?</em>
+</h1>
+<p class="intro">Put real numbers behind an automation idea. Include review time, exceptions, and running costs before you commit to building it.</p>
+<div class="grid">
+<section class="panel" aria-labelledby="inputs-title">
+<h2 id="inputs-title">Your workflow</h2>
+<p class="sub">Use one recurring task. Estimates update as you type.</p>
+<div class="fields">
+<label class="field">
+<span>Runs per week</span>
+<input id="runs" type="number" min="0" step="1" inputmode="numeric" value="40">
+<small>How often the task happens</small>
+</label>
+<label class="field">
+<span>Minutes per run today</span>
+<input id="manual" type="number" min="0" step="1" inputmode="decimal" value="25">
+<small>Current hands-on time</small>
+</label>
+<label class="field">
+<span>Loaded hourly cost ($)</span>
+<input id="rate" type="number" min="0" step="1" inputmode="decimal" value="55">
+<small>Salary, benefits, overhead</small>
+</label>
+<label class="field">
+<span>Review minutes per run</span>
+<input id="review" type="number" min="0" step="1" inputmode="decimal" value="5">
+<small>Human check after automation</small>
+</label>
+</div>
+<div class="divider">
+</div>
+<div class="fields">
+<label class="field">
+<span>Exception rate (%)</span>
+<input id="exception" type="number" min="0" max="100" step="1" inputmode="decimal" value="15">
+<small>Runs needing manual recovery</small>
+</label>
+<label class="field">
+<span>Recovery minutes</span>
+<input id="recovery" type="number" min="0" step="1" inputmode="decimal" value="20">
+<small>Extra time for each exception</small>
+</label>
+<label class="field">
+<span>One-time setup ($)</span>
+<input id="setup" type="number" min="0" step="100" inputmode="decimal" value="3000">
+<small>Build, integration, training</small>
+</label>
+<label class="field">
+<span>Monthly running cost ($)</span>
+<input id="running" type="number" min="0" step="10" inputmode="decimal" value="150">
+<small>Tools, API, support</small>
+</label>
+</div>
+<p class="error" id="error" role="status">
+</p>
+</section>
+<section class="panel result" aria-labelledby="results-title">
+<h2 id="results-title">The 12-month case</h2>
+<p class="sub">Freed time is valued at your loaded rate. It is not automatically cash saved.</p>
+<div class="metric-label">Estimated capacity value, net of costs</div>
+<div class="big" id="net">$0</div>
+<p class="big-note" id="net-note">Over the first year</p>
+<div class="stats">
+<div class="stat">
+<strong id="hours">0 hrs</strong>
+<span>Human time freed per week</span>
+</div>
+<div class="stat">
+<strong id="payback">—</strong>
+<span>Estimated break-even</span>
+</div>
+<div class="stat">
+<strong id="gross">$0</strong>
+<span>Annual value of time freed</span>
+</div>
+<div class="stat">
+<strong id="total-cost">$0</strong>
+<span>First-year cash cost</span>
+</div>
+</div>
+<div class="verdict" id="verdict">
+</div>
+<p class="risk">This estimate does not price wrong outputs, customer impact, compliance work, or ongoing maintenance time. Check those in a pilot before making a go decision.</p>
+<div class="actions">
+<button class="action" id="share" type="button">Copy shareable link</button>
+<button class="action secondary" id="reset" type="button">Reset example</button>
+</div>
+<div class="next-step">
+<strong>Replace the estimate with pilot evidence</strong>
+<p>Log real cases, check the failure rate, and export a go/no-go memo in the offline Pilot Workbook.</p>
+<a href="https://workflow-return.orionapex.chatgpt.site/workbook/">See the $29 workbook</a>
+<small>One-time digital download. No custom audit or guaranteed outcome.</small>
+</div>
+</section>
+</div>
+<div class="below" id="method">
+<section>
+<h2>How the estimate works</h2>
+<p>This is a capacity estimate: it prices time freed at the loaded hourly rate. It does not assume a headcount reduction or new revenue.</p>
+<p>Weekly time freed = runs × (current minutes − review minutes − exception rate × recovery minutes) ÷ 60. Annual labor value uses 52 weeks. First-year net value subtracts setup and 12 months of running costs.</p>
+<p>Estimated break-even divides setup cost by monthly labor value freed after running costs. A workflow with zero or negative monthly savings has no break-even point under these assumptions.</p>
+</section>
+<section>
+<h2>Before you automate</h2>
+<ul>
+<li>Time a sample of real cases instead of relying on the best case.</li>
+<li>Count quality checks, failures, and rework. A fast wrong answer costs more.</li>
+<li>Name the owner who will monitor exceptions and maintain the workflow.</li>
+<li>Run a small pilot, then replace these assumptions with measured results. <a href="https://workflow-return.orionapex.chatgpt.site/guide/">Use the pilot guide</a>.</li>
+</ul>
+<p>Not sure whether the workflow is ready to test? Use the free <a href="https://workflow-return.orionapex.chatgpt.site/checklist/">10-point pilot-readiness checklist</a>.</p>
+<p>For a concrete scenario, <a href="https://workflow-return.orionapex.chatgpt.site/examples/invoice-processing/">see the invoice-processing worked example</a> and how exceptions change the result.</p>
+<p>Ready to replace estimates with observed cases? <a href="https://workflow-return.orionapex.chatgpt.site/workbook/">Use the $29 Pilot Workbook</a> to log quality, review, recovery, and a go/no-go memo.</p>
+<p>Calculations run in your browser. A shared link contains your inputs; anyone with that link can read them. Avoid entering confidential numbers.</p>
+</section>
+</div>
+</main>
+<footer>Workflow Return · An independent planning tool</footer>
+<script>
+const ids=['runs','manual','rate','review','exception','recovery','setup','running'];const defaults={runs:40,manual:25,rate:55,review:5,exception:15,recovery:20,setup:3000,running:150};const fields=Object.fromEntries(ids.map(id=>[id,document.getElementById(id)]));const out=id=>document.getElementById(id);const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);const compact=n=>new Intl.NumberFormat('en-US',{maximumFractionDigits:1}).format(n);function read(){let v={};for(const id of ids){v[id]=Number(fields[id].value);if(fields[id].value.trim()===''||!Number.isFinite(v[id])||v[id]<0||(id==='exception'&&v[id]>100))return null}return v}function render(){let v=read();if(!v){out('error').textContent='Enter nonnegative numbers; exception rate must be 0–100%.';for(const id of ['net','hours','payback','gross','total-cost'])out(id).textContent='—';out('verdict').textContent='Correct the inputs to see an estimate.';return}out('error').textContent='';let weekly=v.runs*(v.manual-v.review-v.exception/100*v.recovery)/60,annual=weekly*52*v.rate,cost=v.setup+12*v.running,net=annual-cost,monthly=annual/12-v.running;out('net').textContent=money(net);out('hours').textContent=compact(weekly)+' hrs';out('gross').textContent=money(annual);out('total-cost').textContent=money(cost);out('payback').textContent=monthly>0?(v.setup===0?'Immediate':compact(v.setup/monthly)+' mo'):'No payback';out('verdict').textContent=weekly<=0?'This setup does not free human time. Reduce review or recovery work before building.':net>0?'The capacity estimate is positive. This becomes cash savings only if spending falls or the freed time creates measurable value. Pilot before investing further.':'The first-year capacity estimate is negative. Test a cheaper setup or a higher-volume workflow.'}let params=new URLSearchParams(location.hash.slice(1)||location.search);for(const id of ids){if(params.has(id)){const value=params.get(id);if(value!==null&&value.length<24)fields[id].value=value}fields[id].addEventListener('input',render)}out('reset').addEventListener('click',()=>{for(const id of ids)fields[id].value=defaults[id];history.replaceState(null,'',location.pathname);render()});out('share').addEventListener('click',async()=>{const v=read();if(!v)return;let url=new URL('https://workflow-return.orionapex.chatgpt.site/');url.search='';const shared=new URLSearchParams();for(const id of ids)shared.set(id,v[id]);url.hash=shared.toString();try{await navigator.clipboard.writeText(url.href);out('share').textContent='Link copied';setTimeout(()=>out('share').textContent='Copy shareable link',2200)}catch{out('share').textContent='Copy unavailable';setTimeout(()=>out('share').textContent='Copy shareable link',2200)}});render();
+</script>
+</body>
+</html>
